@@ -21,10 +21,73 @@
 </head>
 <body>
 
-  <div class="container">
-    <h1>Hello World</h1>
+  <div class="container p-5  rounded-3 shadow-lg ">
+    <h1 class="text-center display-3 text-uppercase fw-normal text-light title-style">Biglietto del treno </h1>
+
+    <div class="container d-inline-block">
+      <div class="row">
+        <div class="col-4 my-auto">
+          <form id="form" class="form p-2 " action="/" method="GET">
+
+            <div class="form-control mb-2">
+              <label id="" class="fs-5" for="km">km </label>
+              <input id="user_km" class="" name="km" type="text"><br>
+              <span id="" class=" my-mex fs-6" for="error"></span>
+            </div>
+            
+            <div class="form-control mb-3">
+              <label for="age" class="fs-5">et&agrave;</label>
+              <input id="user_age" class="" name="passwd" type="age"><br>
+              <span id="" class="my-mex fs-6" for="error"></span>
+            </div>
+    
+            <button type="submit" onClick="myEvent()" class="btn btn-primary" >Submit</button>
+          </form>
+          
+        </div>
+
+        <div class="col-8  d-flex justify-content-end">
+          <div class="row">
+            <!-- output -->
+            <div class="col ">
+              <div class="container">
+                <span id="original" class="fw-normal text-warning"></span><br>
+                <span id="discount" class="fw-normal text-danger"></span><br>
+                <span id="output" class=" fw-normal text-success"></span>
+              </div>
+              
+
+            </div>
+
+            <div class="col ">
+              <img src="assets/img/train2.gif" class="w-100 rounded-circle" alt="">
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    
   </div>
 
   <script src="js/script.js"></script>
 </body>
 </html>
+
+<!-- 
+  <form id="form" class="form p-2" action="/" method="GET">
+        <div class="form-control">
+          <label id="" class="fs-5" for="name">km </label>
+          <input id="name" name="name" type="text" required>
+          <label id="" class="error text-danger text-uppercase lead fs-6" for="error">Errore</label>
+        </div>
+        <div class="form-control mb-1">
+          <label for="passwd" class="fs-5 x">et&agrave;</label>
+          <input id="passwd" name="passwd" type="text" required>
+          <label id="" class="error text-danger text-uppercase lead fs-6" for="error">Errore</label>
+        </div>
+
+        <button type="submit" class="btn btn-primary" >Submit</button>
+      </form>
+
+ -->
