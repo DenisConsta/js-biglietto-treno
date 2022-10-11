@@ -1,5 +1,6 @@
-
-
+:root{
+  --my-orange : orange;
+}
 .debug{
   background-color: bisque;
   border: 1px solid firebrick;
@@ -10,14 +11,12 @@ body{
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #2a2a2a;
 }
 
 .title-style{
-  text-shadow: 2px 0 #000, -2px 0 #000, 0 2px #000, 0 -2px #000,
-    1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000;
+  text-shadow: 2px 0 var(--my-orange), -2px 0 var(--my-orange), 0 2px var(--my-orange), 0 -2px var(--my-orange),
+    1px 1px var(--my-orange), -1px -1px var(--my-orange), 1px -1px var(--my-orange), -1px 1px var(--my-orange);
 }
-
 
 .my-mex{
   color: red;
