@@ -33,12 +33,21 @@ let output, sconto, original;
 form.addEventListener('submit', (e) => {
   e.preventDefault();
   checkInputs();
+  
+  //clear inputs 
+  const inputs = document.querySelectorAll('#user_km, #user_age');
+  inputs.forEach(input => {
+    input.value = '';
+  });
 });
 
 function myEvent(){
   if(checkInputs()){
     output = calcPrice(parseInt(user_km.value), parseInt(user_age.value));
     console.log(output);
+    document.getElementById('data').innerHTML = `
+      KM : ${user_km.value} | age : ${user_age.value}
+    `;
     document.getElementById('original').innerHTML = `
       Prezzo iniziale : ${original} €
     `;
@@ -49,6 +58,7 @@ function myEvent(){
       Prezzo Finale : ${output} €
     `;
   }
+
 }
 
 // checkInputs() controlla che gli input non siano vuoti e non contengano caratteri
@@ -112,3 +122,4 @@ function calcDiscount(age, result){
     return 0;
   
 }
+
