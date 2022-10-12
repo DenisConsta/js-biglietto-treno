@@ -1,10 +1,10 @@
 
 //* BASIC script
 
-/* const user_km = parseInt(prompt("Quanti KM vuoi percorrere ? "));
+const user_km = parseInt(prompt("Quanti KM vuoi percorrere ? "));
 const user_age = parseInt(prompt("Inserisci la tua età"));
- */
-/* 
+/*  */
+/*  */
 // costo x km percorso 
 const km_price = 0.21;
 // sconti legati all'età
@@ -21,7 +21,7 @@ else if (user_age >= 65)
 // arrotondamento delle ultime due cifre decimali 
 result = result.toFixed(2);
 console.log("Prezzo da pagare : " +  result + "€");
- */
+
 
 //* --------------------------------------------------------
 
