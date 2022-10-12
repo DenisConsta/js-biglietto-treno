@@ -1,28 +1,53 @@
+
 :root{
-  --my-orange : orange;
+  --my-red: #B91450;
 }
+
+/* Utilities */
+
 .debug{
   background-color: bisque;
   border: 1px solid firebrick;
 }
 
-body{
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
+body> .container-fluid{
+  background-color: var(--my-red);
+  min-height: 100vh;
 }
 
-.title-style{
-  text-shadow: 2px 0 var(--my-orange), -2px 0 var(--my-orange), 0 2px var(--my-orange), 0 -2px var(--my-orange),
-    1px 1px var(--my-orange), -1px -1px var(--my-orange), 1px -1px var(--my-orange), -1px 1px var(--my-orange);
+.card,
+form{
+  border-radius: 1rem;
 }
 
-.my-mex{
-  color: red;
+.ticket .row,
+.ticket .col{
+  min-height: 300px;
 }
 
-.form-control.error input{
-  border: 2px solid red;
+.my-col label{
+  color: var(--my-red);
 }
 
+.my-col input,
+select{
+  max-width: 70%;
+  border-color: var(--my-red);
+  border-radius: .5rem;
+}
+
+.my-btns .btn{
+  background-color: lightgrey;
+  border-color: var(--my-red);
+  color: var(--my-red);
+}
+
+.my-bg-grey{
+  background-color: grey;
+}
+
+.my-border{
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}

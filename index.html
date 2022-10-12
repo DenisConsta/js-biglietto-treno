@@ -21,53 +21,88 @@
 </head>
 <body>
 
-  <div class="container p-5  rounded-3 shadow-lg bg-dark">
-    <h1 class="text-center display-3 text-uppercase fw-normal text-light title-style">Biglietto del treno </h1>
-
-    <div class="container d-inline-block">
-      <div class="row">
-        <div class="col-4 my-auto">
-          <form id="form" class="form p-2 " action="/" method="GET">
-
-            <div class="form-control mb-2">
-              <label id="" class="fs-5" for="km">km </label>
-              <input id="user_km" class="" name="km" type="text"><br>
-              <span id="" class=" my-mex fs-6" for="error"></span>
-            </div>
-            
-            <div class="form-control mb-3">
-              <label for="age" class="fs-5">et&agrave;</label>
-              <input id="user_age" class="" name="passwd" type="age"><br>
-              <span id="" class="my-mex fs-6" for="error"></span>
-            </div>
+  <div class="container-fluid p-5">
     
-            <button type="submit" onClick="myEvent()" class="btn btn-warning" >Submit</button>
-          </form>
-          
-        </div>
+    <div class="container price text-center pb-5">
+      <h2 class=" text-light fw-bold text-uppercase pb-3">Calcola il prezzo del tuo biglietto</h2>
+      <div class="card shadow-lg">
 
-        <div class="col-8  d-flex justify-content-end">
-          <div class="row ">
-            <!-- output -->
-            <div class="col ">
-              <div class="container my-c pt-3">
-                <span id="data" class="text-light lead"></span><br>
-                <span id="original" class="fw-normal text-warning lead"></span><br>
-                <span id="discount" class="fw-normal text-danger lead"></span><br>
-                <span id="output" class=" fw-normal text-success lead"></span>
+        <form action="/" class=" d-flex p-5">
+          <div class="container">
+
+            <div class="row row-cols-3 pb-5">
+              <div class="col my-col d-flex flex-column">
+                <label for="Name" class="pb-3">Nome Cognome</label>
+                <input type="text" id="fname" name="fname" class="text-center align-self-center">
               </div>
-              
+
+              <div class="col my-col  d-flex flex-column">
+                <label for="Name" class="pb-3">KM da percorrere</label>
+                <input type="text" id="fname" name="fname" class="text-center align-self-center" >
+              </div>
+
+              <div class="col my-col  d-flex flex-column">
+                <label for="Name" class="pb-3">Fascia d'et&agrave;</label>
+                <select name="cars" id="cars" class="text-center align-self-center">
+                  <option value="minorenne"> &#60; di 18 anni </option>
+                  <option value="normale">tra i 18 ed i 65 anni</option>
+                  <option value="maggiorenne">&#62; di 65 anni</option>
+                </select>
+              </div>
             </div>
 
-            <div class="col  ">
-              <img src="assets/img/train2.gif" class="w-100 rounded-circle" alt="">
+            <div class="my-btns pb-3">
+              <a class="btn btn-primary lead">Genera</a>
+              <a class="btn btn-primary lead">Annulla</a>
             </div>
+
           </div>
-          
-        </div>
+        </form>
+
       </div>
     </div>
-    
+
+    <div class="container ticket">
+      
+      <h2 class=" text-light fw-bold text-uppercase pb-3 text-center">Il tuo biglietto</h2>
+      <div class="card shadow-lg p-5">
+        <h3>Dettagli Passeggeri </h3>
+        <div class="container">
+          <div class="row  ">
+            <div class="col-3 my-bg-grey p-3">
+              <h4 class="text-uppercase fw-bold">Nome passeggero</h4>
+              <span id="outputName" class=""></span>
+            </div>
+            <div class="col my-border">
+              <div class="row p-3">
+
+                <div class="col ">
+                  <h5 class="fw-bold">Offerta</h5>
+                  <span id="outputOfferr" class=""></span>
+                </div>
+                <div class="col ">
+                  <h5 class="fw-bold">Carrozza</h5>
+                  <span id="outputCarriage" class=""></span>
+                </div>
+                <div class="col ">
+                  <h5 class="fw-bold">Codice CP</h5>
+                  <span id="outputCode" class=""></span>
+                </div>
+                <div class="col ">
+                  <h5 class="fw-bold">Costo Biglietto</h5>
+                  <span id="outputPrice" class=""></span>
+                </div>
+
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
   </div>
 
   <script src="js/script.js"></script>
